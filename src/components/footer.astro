@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+---
+
+<footer>
+    <div>
+        <small>&copy; <span></span> Liveboot.org</small>
+        <ul>
+            <li><a href="/imprint">Imprint</a></li>
+            <li>
+                <a
+                    href="https://github.com/liveboot"
+                    target="_blank"
+                    rel="noopener">GitHub</a
+                >
+            </li>
+            <li>
+                <a
+                    href="https://discord.liveboot.org/"
+                    target="_blank"
+                    rel="noopener">Discord</a
+                >
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<style>
+    footer {
+        margin-top: 40px;
+        padding: 28px 0 48px;
+        border-top: 1px solid var(--card-stroke);
+        color: var(--muted);
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 32px 20px;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: center;
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+</style>
