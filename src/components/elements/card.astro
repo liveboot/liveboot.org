@@ -1,0 +1,22 @@
+---
+import "../../styles/tailwind.css";
+
+const { title, content } = Astro.props;
+---
+
+<article
+    class="relative bg-white/5 border border-white/10 rounded-xl p-6 shadow-2xl"
+>
+    <div class="flex justify-center items-center gap-3">
+        <div
+            aria-hidden="true"
+            class="w-7 h-7 grid rounded-sm place-items-center bg-gradient-to-br from-indigo-500 to-indigo-400 flex-shrink-0"
+        >
+            <slot />
+        </div>
+
+        <h4 class="text-xl">{title}</h4>
+    </div>
+
+    <p class="mt-4 text-center text-gray-400">{content}</p>
+</article>
