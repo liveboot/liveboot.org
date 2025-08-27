@@ -1,18 +1,20 @@
 <div align="center">
-    <a href="https://liveboot.org" style="text-decoration: none; color: inherit">
+    <a href="https://liveboot.org">
         <img src="public/liveboot.svg" alt="Liveboot Logo" width="120" />
+    </a>
+    <a href="https://liveboot.org">
         <h1>Liveboot.org</h1>
     </a>
     <p>
         <strong>Modern rescue OS - Website built with Astro + TailwindCSS</strong>
     </p>
-    <a href="https://astro.build" style="text-decoration: none; color: inherit">
+    <a href="https://astro.build">
         <img src="https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE" alt="Astro Badge"/>
     </a>
-    <a href="https://tailwindcss.com" style="text-decoration: none; color: inherit">
+    <a href="https://tailwindcss.com">
         <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind Badge"/>
     </a>
-    <a href="https://github.com/liveboot" style="text-decoration: none; color: inherit">
+    <a href="https://github.com/liveboot">
         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
     </a>
 </div>
