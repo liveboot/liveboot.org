@@ -1,6 +1,13 @@
 ---
 import "../styles/tailwind.css";
 import Card from "./elements/card.astro";
+
+import Shipping from "../../public/assets/shipping-fast.svg";
+import Check from "../../public/assets/check-circle.svg";
+import Plus from "../../public/assets/plus.svg";
+import Shield from "../../public/assets/shield-alt.svg";
+import Archive from "../../public/assets/archive.svg";
+import Layers from "../../public/assets/layers.svg";
 ---
 
 <section>
@@ -10,111 +17,40 @@ import Card from "./elements/card.astro";
             title="Modern & Fast"
             content="RAM-only live session. Fast boots, fast tools, zero cruft."
         >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M3 4h18v12H3z" stroke="#041018" stroke-width="2"
-                ></path>
-                <path d="M3 16h18" stroke="#041018" stroke-width="2"></path>
-                <circle cx="8" cy="20" r="2" fill="#041018"></circle>
-                <circle cx="16" cy="20" r="2" fill="#041018"></circle>
-            </svg>
+            <Shipping class="h-4 w-4" />
         </Card>
         <Card
             title="NixOS & Reproducible"
             content="Declarative builds for predictable, verifiable releases."
         >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M12 2l7 4v12l-7 4-7-4V6l7-4z"
-                    stroke="#041018"
-                    stroke-width="2"></path>
-            </svg>
+            <Check class="h-4 w-4" />
         </Card>
         <Card
             title="UI/UX Friendly"
             content="Thoughtful defaults and polished interfaces for common rescue jobs."
         >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M4 12h16M12 4v16" stroke="#041018" stroke-width="2"
-                ></path>
-            </svg>
+            <Plus class="h-4 w-4" />
         </Card>
 
         <Card
             title="Secure by Default"
             content="Least-privilege, signed artifacts, and transparent build pipelines."
         >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M12 3a9 9 0 100 18 9 9 0 000-18z"
-                    stroke="#041018"
-                    stroke-width="2"></path>
-                <path d="M8 12l2 2 5-5" stroke="#041018" stroke-width="2"
-                ></path>
-            </svg>
+            <Shield class="h-4 w-4" />
         </Card>
 
         <Card
             title="Tools that Matter"
             content="Disk cloning, data rescue, Windows registry editor, and more out of the box."
         >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M4 5h16v14H4z" stroke="#041018" stroke-width="2"
-                ></path>
-                <path
-                    d="M7 9h10M7 13h10M7 17h6"
-                    stroke="#041018"
-                    stroke-width="2"></path>
-            </svg>
+            <Archive class="h-4 w-4" />
         </Card>
 
         <Card
             title="Community-Driven"
             content="Open-source, transparent and welcoming contributions."
         >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M12 3l9 6-9 6-9-6 9-6z"
-                    stroke="#041018"
-                    stroke-width="2"></path>
-                <path d="M3 15l9 6 9-6" stroke="#041018" stroke-width="2"
-                ></path>
-            </svg>
+            <Layers class="h-4 w-4" />
         </Card>
     </div>
 </section>
