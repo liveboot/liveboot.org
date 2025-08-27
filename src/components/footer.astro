@@ -1,11 +1,17 @@
 ---
-import "../styles/global.css";
+import "../styles/tailwind.css";
 ---
 
-<footer>
-    <div>
-        <small>&copy; <span></span> Liveboot.org Community | Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></small>
-        <ul>
+<footer
+    class="mt-12 py-7 px-12 border-t border-white/10 max-w-7xl m-auto text-gray-400"
+>
+    <div class="grid grid-cols-[1fr_auto] gap-3 items-center">
+        <small
+            >&copy; <span></span> Liveboot.org Community | Uicons by <a
+                href="https://www.flaticon.com/uicons">Flaticon</a
+            ></small
+        >
+        <ul class="flex gap-4">
             <li><a href="/imprint">Imprint</a></li>
             <li>
                 <a
@@ -24,31 +30,3 @@ import "../styles/global.css";
         </ul>
     </div>
 </footer>
-
-<style>
-    footer {
-        margin-top: 40px;
-        padding: 28px 0 48px;
-        border-top: 1px solid var(--card-stroke);
-        color: var(--muted);
-        max-width: var(--maxw);
-        margin: 0 auto;
-        padding: 32px 20px;
-    }
-
-    div {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 10px;
-        align-items: center;
-    }
-
-    footer ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-    }
-</style>
