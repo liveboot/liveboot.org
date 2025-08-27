@@ -1,87 +1,41 @@
 ---
-import "../styles/global.css";
+import "../styles/tailwind.css";
+
+import Dropdown from "./elements/dropdown.astro";
 ---
 
 <section id="faq">
-    <h3>FAQ</h3>
-    <div class="faq">
-        <details>
-            <summary>Will Liveboot modify my disks?</summary>
-            <p>
-                No. It will run entirely in RAM by default. Tools that write to
-                disks ask for confirmation and are opt-in.
-            </p>
-        </details>
-        <details>
-            <summary>What hardware is supported?</summary>
-            <p>
-                Anything a standard Linux kernel supports. We target modern
-                x86-64 and common Wi-Fi/Ethernet chipsets. ARM and RISC-V builds
-                may follow.
-            </p>
-        </details>
-        <details>
-            <summary>How big is the image and how fast does it boot?</summary>
-            <p>
-                We aim for a small footprint with fast, network-enabled boots.
-                Exact sizes depend on enabled toolsets per release.
-            </p>
-        </details>
-        <details>
-            <summary>Can I customize the toolset?</summary>
-            <p>
-                With a bit of fiddling, yes. The NixOS base allows you to build
-                custom variants or enable extra modules.
-            </p>
-        </details>
-        <details>
-            <summary>Is Secure Boot supported?</summary>
-            <p>
-                Planned. We're working on signed artifacts and reproducible
-                builds; roadmap will note progress.
-            </p>
-        </details>
-        <details>
-            <summary>Is this website AI generated?</summary>
-            <p>
-                Yes, for now. We just wanted to quickly get something up and
-                running.
-            </p>
-        </details>
+    <h3 class="text-2xl m-8 mt-20 max-w-full">FAQ</h3>
+    <div class="grid gap-3 m-auto">
+        <Dropdown summary="Will Liveboot modify my disks?">
+            No. It will run entirely in RAM by default. Tools that write to
+            disks ask for confirmation and are opt-in.
+        </Dropdown>
+
+        <Dropdown summary="What hardware is supported?">
+            Anything a standard Linux kernel supports. We target modern x86-64
+            and common Wi-Fi/Ethernet chipsets. ARM and RISC-V builds may
+            follow.
+        </Dropdown>
+
+        <Dropdown summary="How big is the image and how fast does it boot?">
+            We aim for a small footprint with fast, network-enabled boots. Exact
+            sizes depend on enabled toolsets per release.
+        </Dropdown>
+
+        <Dropdown summary="Can I customize the toolset?">
+            With a bit of fiddling, yes. The NixOS base allows you to build
+            custom variants or enable extra modules.
+        </Dropdown>
+
+        <Dropdown summary="Is Secure Boot supported?">
+            Planned. We're working on signed artifacts and reproducible builds;
+            roadmap will note progress.
+        </Dropdown>
+
+        <Dropdown summary="Is this website AI generated?">
+            Yes, for now. We just wanted to quickly get something up and
+            running.
+        </Dropdown>
     </div>
 </section>
-
-<style>
-    section h3 {
-        font-size: 24px;
-        margin: 0 0 14px;
-    }
-
-    .faq {
-        max-width: var(--maxw);
-        margin: 0 auto;
-        display: grid;
-        gap: 10px;
-    }
-
-    details {
-        background: var(--card);
-        border: 1px solid var(--card-stroke);
-        border-radius: var(--radius-lg);
-        padding: 14px 16px;
-    }
-
-    summary {
-        cursor: pointer;
-        font-weight: 700;
-    }
-
-    details[open] {
-        border-color: rgba(255, 255, 255, 0.22);
-    }
-
-    details p {
-        color: var(--muted);
-        margin: 8px 0 0;
-    }
-</style>

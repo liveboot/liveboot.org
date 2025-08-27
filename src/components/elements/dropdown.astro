@@ -1,0 +1,13 @@
+---
+import "../../styles/tailwind.css";
+
+const { summary } = Astro.props;
+---
+
+<!-- TODO: maybe animate opening and rotating the arrow -->
+<details class="bg-white/5 border border-white/10 rounded-lg p-4 shadow-2xl motion-safe:transition motion-safe:open:border-white/25">
+    <summary class="font-semibold cursor-pointer">{summary}</summary>
+    <p class="text-gray-400 my-1">
+        <slot />
+    </p>
+</details>

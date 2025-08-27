@@ -10,8 +10,8 @@ import Archive from "../../public/assets/archive.svg";
 import Layers from "../../public/assets/layers.svg";
 ---
 
-<section>
-    <h3 class="text-2xl m-4">Why Liveboot</h3>
+<section id="features">
+    <h3 class="text-2xl m-8 mt-20">Why Liveboot</h3>
     <div class="grid grid-cols-3 gap-4">
         <Card
             title="Modern & Fast"
@@ -19,12 +19,14 @@ import Layers from "../../public/assets/layers.svg";
         >
             <Shipping class="h-4 w-4" />
         </Card>
+
         <Card
             title="NixOS & Reproducible"
             content="Declarative builds for predictable, verifiable releases."
         >
             <Check class="h-4 w-4" />
         </Card>
+
         <Card
             title="UI/UX Friendly"
             content="Thoughtful defaults and polished interfaces for common rescue jobs."
