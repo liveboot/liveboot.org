@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://liveboot.org">
-        <img src="public/liveboot.svg" alt="Liveboot Logo" width="120" />
+        <img src="public/favicon.svg" alt="Liveboot Logo" width="120" />
     </a>
     <h1>
         <a href="https://liveboot.org">Liveboot.org</a>
