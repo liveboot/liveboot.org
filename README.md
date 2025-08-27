@@ -2,9 +2,9 @@
     <a href="https://liveboot.org">
         <img src="public/liveboot.svg" alt="Liveboot Logo" width="120" />
     </a>
-    <a href="https://liveboot.org">
-        <h1>Liveboot.org</h1>
-    </a>
+    <h1>
+        <a href="https://liveboot.org">Liveboot.org</a>
+    </h1>
     <p>
         <strong>Modern rescue OS - Website built with Astro + TailwindCSS</strong>
     </p>
