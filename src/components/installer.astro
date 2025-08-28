@@ -2,61 +2,36 @@
 import "../styles/global.css";
 
 import Button from "./elements/button.astro";
+
+const installCmd = "COMING SOON";
 ---
 
 <section id="install">
-    <div class="installer">
-        <div class="command-field">
-            <input id="install-cmd" type="text" value="COMING SOON" readonly />
-            <button class="copy-btn" id="copy-btn">Copy</button>
-            <div class="copy-toast" id="copy-toast">Copied</div>
+    <div class="flex justify-center mt-6 mx-3">
+        <div class="relative max-w-4xl flex-7 shadow-2xl">
+            <input
+                type="text"
+                value={installCmd}
+                readonly
+                class="font-mono border border-white/20 bg-white/5 rounded-3xl w-full p-4"
+            />
+            <!-- TODO: fade out to right if command too big for screen -->
+            <!-- <button
+                id="copy-btn"
+                class="absolute bg-teal-800 right-2 top-2 bottom-2 px-4 rounded-2xl font-bold cursor-pointer backdrop-blur-sm"
+                >Copy</button
+            > -->
+            <!-- <div class="copy-toast" id="copy-toast">Copied</div> -->
         </div>
     </div>
-    <div class="quick-links">
+    <div class="mt-10 flex gap-3 justify-center flex-wrap">
         <Button href="/docs" primary>Read the docs</Button>
         <Button href="https://github.com/liveboot">Contribute</Button>
     </div>
 </section>
 
+<!--
 <style>
-    .installer {
-        display: flex;
-        justify-content: center;
-        margin-top: 22px;
-    }
-
-    .command-field {
-        position: relative;
-        flex: 1 1 680px;
-        max-width: 880px;
-    }
-
-    .command-field input {
-        width: 100%;
-        padding: 16px 104px 16px 18px;
-        border-radius: 14px;
-        background: var(--card);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-            "Liberation Mono", "Courier New", monospace;
-        font-size: 14px;
-        color: var(--ink);
-    }
-
-    .copy-btn {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        bottom: 8px;
-        padding: 0 14px;
-        border-radius: 12px;
-        border: none;
-        background: var(--hi);
-        color: #0f172a;
-        font-weight: 700;
-        cursor: pointer;
-    }
-
     .copy-toast {
         position: absolute;
         right: 16px;
@@ -78,27 +53,5 @@ import Button from "./elements/button.astro";
         opacity: 1;
         transform: translateY(0);
     }
-
-    .quick-links {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        margin-top: 18px;
-        flex-wrap: wrap;
-    }
-
-    .section {
-        padding: 42px 0;
-    }
-
-    .section h3 {
-        font-size: 24px;
-        margin: 0 0 14px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
 </style>
+-->

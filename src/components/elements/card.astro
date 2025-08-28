@@ -1,16 +1,16 @@
 ---
-import "../../styles/tailwind.css";
+import "../../styles/global.css";
 
 const { title, content } = Astro.props;
 ---
 
 <article
-    class="relative m-3 bg-white/5 border border-white/10 rounded-xl p-6 shadow-2xl"
+    class="relative m-3 bg-white/5 border border-white/10 rounded-3xl p-6 shadow-2xl"
 >
     <div class="flex justify-center items-center gap-4">
         <div
             aria-hidden="true"
-            class="w-7 h-7 grid rounded-sm place-items-center bg-gradient-to-br from-indigo-500 to-indigo-400 flex-shrink-0"
+            class="w-7 h-7 grid rounded-[10px] place-items-center bg-gradient-to-br from-indigo-500 to-indigo-400 flex-shrink-0"
         >
             <slot />
         </div>
