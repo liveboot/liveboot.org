@@ -5,11 +5,12 @@ import Footer from "../components/footer.astro";
 
 import "../styles/global.css";
 
-const { title } = Astro.props;
+const { title = "Liveboot.org", noindex = false } = Astro.props;
+
 ---
 
 <html lang="en">
-    <Head title={title} />
+    <Head title={title} noindex={noindex} />
     <body id="top">
         <Nav />
         <main class="max-w-7xl mx-auto text-center pt-20 pb-10">
