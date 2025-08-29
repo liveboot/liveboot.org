@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 const { title, noindex } = Astro.props;
 ---
 
@@ -7,6 +8,7 @@ const { title, noindex } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    {noindex && <meta name="robots" content="noindex">}
+    {noindex && <meta name="robots" content="noindex" />}
     <title>{title}</title>
+    <ClientRouter />
 </head>
