@@ -4,7 +4,7 @@ import "../../styles/global.css";
 const { summary } = Astro.props;
 ---
 
-<!-- TODO: maybe animate opening and rotating the arrow -->
+<!--
 <details
     class="mx-3 bg-white/5 border border-white/10 rounded-2xl p-4 shadow-2xl motion-safe:transition ease-linear motion-safe:open:border-white/25"
 >
@@ -13,3 +13,29 @@ const { summary } = Astro.props;
         <slot />
     </p>
 </details>
+-->
+<div
+    class="accordion mx-3 bg-white/5 border border-white/10 rounded-2xl p-4 shadow-2xl"
+>
+    <button
+        type="button"
+        onclick="this.parentElement.classList.toggle('open')"
+        class="flex w-full items-start justify-center gap-1.5 font-semibold cursor-pointer touch-manipulation"
+    >
+        <span
+            class="arrow motion-safe:transition-transform motion-safe:duration-300 [.open_&]:rotate-90"
+            >▶</span
+        >
+        <span class="text-center">{summary}</span>
+    </button>
+
+    <div
+        class="content grid grid-rows-[0fr] opacity-0 overflow-hidden motion-safe:transition-all motion-safe:duration-300 ease-in-out [.open_&]:grid-rows-[1fr] [.open_&]:opacity-100 [.open_&]:mt-2"
+    >
+        <div class="overflow-hidden">
+            <p class="text-gray-400 my-1">
+                <slot />
+            </p>
+        </div>
+    </div>
+</div>
