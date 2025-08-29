@@ -5,12 +5,18 @@ import Footer from "../components/footer.astro";
 
 import "../styles/global.css";
 
-const { title = "Liveboot.org", noindex = false } = Astro.props;
+const defaultDescription =
+    "Coming soon: Liveboot is a modern rescue OS - fast boots, safe by default, and packed with tools for cloning, recovery, and troubleshooting.";
 
+const {
+    title = "Liveboot.org",
+    noindex = false,
+    description = defaultDescription,
+} = Astro.props;
 ---
 
 <html lang="en">
-    <Head title={title} noindex={noindex} />
+    <Head title={title} noindex={noindex} description={description} />
     <body id="top">
         <Nav />
         <main class="max-w-7xl mx-auto text-center pt-20 pb-10">

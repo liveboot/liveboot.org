@@ -7,7 +7,7 @@ const title = frontmatter.title || "Liveboot.org";
 const noindex = frontmatter.noindex || false;
 ---
 
-<Base title={title} noindex={noindex}>
+<Base title={title} noindex={noindex} description={frontmatter.description}>
     <slot />
 </Base>
 
