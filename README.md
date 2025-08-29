@@ -43,7 +43,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/liveboot/liveboot.org
-cd website
+cd liveboot.org
 ```
 
 Install dependencies:
