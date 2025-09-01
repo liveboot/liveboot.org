@@ -17,11 +17,11 @@ if (primary) {
 ---
 
 {
-    (external && (
+    external ? (
         <a href={href} target="_blank" rel="noopener" class={tailwind}>
             <slot />
         </a>
-    )) || (
+    ) : (
         <a href={href} class={tailwind} data-astro-prefetch>
             <slot />
         </a>
