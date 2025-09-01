@@ -1,6 +1,9 @@
 ---
 import Base from "./base.astro";
 
+import "../styles/global.css";
+import "../styles/markdown.css";
+
 const { frontmatter } = Astro.props;
 
 const title = frontmatter.title || "Liveboot.org";
@@ -8,28 +11,7 @@ const noindex = frontmatter.noindex || false;
 ---
 
 <Base title={title} noindex={noindex} description={frontmatter.description}>
-    <slot />
+    <article>
+        <slot />
+    </article>
 </Base>
-
-<style is:global>
-    * {
-        text-align: left;
-    }
-
-    h1 {
-        font-weight: 800;
-        font-size: 40px;
-        text-align: center;
-    }
-
-    h2 {
-        font-weight: 600;
-        font-size: 30px;
-    }
-
-    h1,
-    h2,
-    p {
-        margin: 0.5rem;
-    }
-</style>

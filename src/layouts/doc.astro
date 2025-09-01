@@ -1,0 +1,16 @@
+---
+import MdInfopage from "./md-infopage.astro";
+
+import "../styles/global.css";
+
+const { frontmatter } = Astro.props;
+---
+
+<MdInfopage frontmatter={frontmatter}>
+    <article
+        transition:name="main-element"
+        class="border border-white/20 bg-white/5 rounded-3xl w-full p-4 shadow-2xl"
+    >
+        <slot />
+    </article>
+</MdInfopage>
