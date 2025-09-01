@@ -6,6 +6,11 @@ article {
     margin: 0.5rem;
 }
 
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 h1 {
     font-weight: 800;
     font-size: 40px;
