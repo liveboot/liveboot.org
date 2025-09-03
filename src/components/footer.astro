@@ -31,7 +31,12 @@ import "../styles/global.css";
     </div>
 </footer>
 
-<script>
-    const span = document.getElementById("copy-year");
-    if (span) span.innerHTML = new Date().getFullYear().toString();
+<script is:inline data-astro-rerun>
+    const applyYear = () => {
+        const span = document.getElementById("copy-year");
+        if (span) span.innerHTML = new Date().getFullYear().toString();
+    };
+
+    document.addEventListener("astro:page-load", applyYear);
+    applyYear();
 </script>
