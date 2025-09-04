@@ -8,9 +8,21 @@ import Liveboot from "../../public/liveboot.svg";
     class="sticky top-0 backdrop-blur-md bg-black/20 border-b border-white/10 z-10"
 >
     <div class="flex items-center justify-between max-w-7xl py-4 px-5 mx-auto">
-        <a href="/" class="flex items-center gap-3">
-            <Liveboot />
-            <div class="font-bold text-lg">Liveboot.org</div>
-        </a>
+        {
+            Astro.url.pathname == "/" ? (
+                <button
+                    onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"
+                    class="flex items-center gap-3 cursor-pointer"
+                >
+                    <Liveboot />
+                    <div class="font-bold text-lg">Liveboot.org</div>
+                </button>
+            ) : (
+                <a href="/" class="flex items-center gap-3">
+                    <Liveboot />
+                    <div class="font-bold text-lg">Liveboot.org</div>
+                </a>
+            )
+        }
     </div>
 </header>
