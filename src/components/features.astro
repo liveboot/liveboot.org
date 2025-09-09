@@ -2,12 +2,14 @@
 import "../styles/global.css";
 import Card from "./elements/card.astro";
 
-import Shipping from "../../public/assets/shipping-fast.svg";
-import Check from "../../public/assets/check-circle.svg";
-import Plus from "../../public/assets/plus.svg";
-import Shield from "../../public/assets/shield-alt.svg";
-import Archive from "../../public/assets/archive.svg";
-import Layers from "../../public/assets/layers.svg";
+const xy = "h-5 w-5";
+
+import Container from "../icons/container-1312-svgrepo-com.svg";
+import Diamond from "../icons/diamond-767-svgrepo-com.svg";
+import FileBoard from "../icons/fileboard-done-1584-svgrepo-com.svg";
+import Lightning from "../icons/lightning-1262-svgrepo-com.svg";
+import Lock from "../icons/lock-open-round-708-svgrepo-com.svg";
+import Script from "../icons/script-1604-svgrepo-com.svg";
 ---
 
 <section id="features">
@@ -17,42 +19,42 @@ import Layers from "../../public/assets/layers.svg";
             title="Modern & Fast"
             content="RAM-only live session. Fast boots, fast tools, zero cruft."
         >
-            <Shipping class="h-4 w-4" />
+            <Lightning class={xy} />
         </Card>
 
         <Card
             title="NixOS & Reproducible"
             content="Declarative builds for predictable, verifiable releases."
         >
-            <Check class="h-4 w-4" />
+            <FileBoard class={xy} />
         </Card>
 
         <Card
             title="UI/UX Friendly"
             content="Thoughtful defaults and polished interfaces for common rescue jobs."
         >
-            <Plus class="h-4 w-4" />
+            <Diamond class={xy} />
         </Card>
 
         <Card
             title="Secure by Default"
             content="Least-privilege, signed artifacts, and transparent build pipelines."
         >
-            <Shield class="h-4 w-4" />
+            <Lock class={xy} />
         </Card>
 
         <Card
             title="Tools that Matter"
             content="Disk cloning, data rescue, Windows registry editor, and more out of the box."
         >
-            <Archive class="h-4 w-4" />
+            <Script class={xy} />
         </Card>
 
         <Card
             title="Community-Driven"
             content="Open-source, transparent and welcoming contributions."
         >
-            <Layers class="h-4 w-4" />
+            <Container class={xy} />
         </Card>
     </div>
 </section>
